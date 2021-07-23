@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>add order</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container-fluid p-3 m-3">
+<div class="modal-content w-50 bg-light m-auto p-3">
+        <form action="{% url 'cafe5:add_new_order_by_class_view' %}" method="post">
+            <h4>add order</h4>
+            {% csrf_token %}
+            <label for="order_num">order number</label><br>
+            <input name="order_number" type="number" id="order_num"><br>
+            <label for="status">status</label><br>
+            <input name="status" type="text" id="status"><br>
+            <label for="timestamp">timestamp</label><br>
+            <input name="timestamp" type="datetime-local" id="timestamp"><br>
+            <label for="menu_item_id">menu item id</label><br>
+            <input name="menu_item_id" type="number" id="menu_item_id"><br>
+            <label for="table_number">table number</label><br>
+            <input name="table_number" type="number" id="table_number"><br><br>
+            <input type="submit">
+
+        </form>
+</div>
+</div>
+</body>
+</html>

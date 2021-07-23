@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Details</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container-fluid">
+<table class="table table-bordered text-center">
+
+    <tr>
+        <th>order number</th>
+        <th>order status</th>
+        <th>table number</th>
+        <th>table position</th>
+        <th>menu item name</th>
+        <th>menu item category</th>
+        <th>menu item price</th>
+        <th>menu item discount</th>
+        <th>menu item delivery time</th>
+    </tr>
+
+    <tr>
+        <td>{{ o_detail.order_number }}</td>
+        <td>{{ o_detail.status }}</td>
+        <td>{{ o_detail.table_id }}</td>
+        <td>{{ o_detail.table_id.cafe_space_position }}</td>
+        <td>{{ o_detail.menu_item_id }}</td>
+        <td>{{ o_detail.menu_item_id.category }}</td>
+        <td>{{ o_detail.menu_item_id.price }}</td>
+        <td>{{ o_detail.menu_item_id.discount }}</td>
+        <td>{{ o_detail.menu_item_id.serving_time_period }}</td>
+
+    </tr>
+
+
+    </table>
+<button class="btn btn-block btn-outline-secondary"><a href="{% url 'cafe5:all_orders_generic_view' %}">back to all orders</a></button>
+</div>
+</body>
+</html>

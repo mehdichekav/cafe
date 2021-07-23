@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Orders List</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<table class="table table-bordered text-center">
+    <tr>
+        <th>order number</th>
+        <th>order status</th>
+        <th>table number</th>
+        <th>menu item name</th>
+        <th>timestamp</th>
+        <th>details</th>
+
+
+    </tr>
+    {% for o in orders_list %}
+        <tr>
+            <td>{{ o.order_number }}</td>
+            <td>{{ o.status }}</td>
+            <td>{{ o.table_id.table_number}}</td>
+            <td>{{ o.menu_item_id.name }}</td>
+            <td>{{ o.time_stamp }}</td>
+            <td><a  href="{% url 'cafe5:order_details_by_class_view' o.id %}">show order details</a></td>
+
+        </tr>
+    {% endfor %}
+</table>
+
+
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>add orders - generic</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container-fluid p-3 m-3">
+    <div class="modal-content w-50 bg-light m-auto p-3">
+        <form method="post" action="{% url 'cafe5:add_new_order_generic_view' %}">
+            <h4>add order</h4>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit">
+        </form>
+    </div>
+</div>
+</body>
+</html>

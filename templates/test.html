@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+        <table>{{ form.as_table }}
+        <input type="submit">
+        </table>
+
+{#        <div class="form-control">#}
+{#        {{ form.price }}#}
+{#        {{ form.Discount }}#}
+{#        {{ form.category }}#}
+{##}
+{#    </div>#}
+    </form>
+</body>
+</html>
